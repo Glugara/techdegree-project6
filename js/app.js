@@ -35,7 +35,6 @@ function addPhraseToDisplay(arr){
     let ulList = document.querySelector('#phrase ul');
     liList.textContent = arr[i];
     ulList.appendChild(liList);
-
     if (liList.textContent === ' ') {
       liList.className = 'space';
     } else {
@@ -51,7 +50,6 @@ addPhraseToDisplay(phraseArray)
   function checkLetter(button) {
     let checkLetter = document.querySelectorAll('.letter');
     let match = null;
-
     for ( let i = 0; i < checkLetter.length; i++) {
       if (checkLetter[i].textContent() === button.textContent()) {
         checkLetter[i].classList.add('show');
@@ -63,7 +61,7 @@ addPhraseToDisplay(phraseArray)
 
 // Keyboard Listener
   qwerty.addEventListener('click', (e) => {
-    if (e.target.tagname === 'BUTTON') {
+    if (e.target.tagname === 'button') {
       e.target.className = 'chosen';
     } if (e.target.className === 'chosen') {
       e.target.disabled = 'true';
