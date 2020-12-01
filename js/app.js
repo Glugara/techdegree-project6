@@ -61,14 +61,14 @@ addPhraseToDisplay(phraseArray)
 
 // Keyboard Listener
   qwerty.addEventListener('click', (e) => {
-    if (e.target.tagname === 'button') {
+    if (e.target.tagName === 'BUTTON') {
       e.target.className = 'chosen';
     } if (e.target.className === 'chosen') {
       e.target.disabled = 'true';
       let letterFound = checkLetter(e.target);
       if (letterFound === null) {
         wrong += 1;
-        lives[wrong - 1].src = "images/lostHeart.png"
+        lives[wrong - 1].src = "images/lostHeart.png";
     }
   }
   checkWin();
